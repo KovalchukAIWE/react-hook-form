@@ -1,8 +1,8 @@
 import { useForm } from 'react-hook-form';
-import styles from './App.module.css';
+import styles from './Form.module.css';
 
 
-function App() {
+function Form() {
   const {
     register,
     formState: {
@@ -54,11 +54,12 @@ function App() {
               },
               pattern: {
                 value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,14}$/,
-                message: "Password must contain only latin letters, at least 1 upper-case character, 1 lower-case character, one number and one special character."
+                // message: "Password must contain only latin letters, at least 1 upper-case character, 1 lower-case character, one number and one special character."
               }
             })}
           />
-          <div className={styles.form__error}>{errors?.password && <p>{errors?.password?.message || "Error" }</p>}</div>
+          <p className={styles.form__error}>Password must contain only latin letters, at least 1 upper-case character, 1 lower-case character, one number and one special character.</p>
+          <div className={styles.form__error}>{errors?.password && <p>{errors?.password?.message || "Follow rules" }</p>}</div>
         <input 
             className={styles.form__input}
             placeholder='Password confirmation'
@@ -78,4 +79,4 @@ function App() {
   );
 }
 
-export default App;
+export default Form;
