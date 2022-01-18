@@ -54,7 +54,6 @@ function Form() {
               },
               pattern: {
                 value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,14}$/,
-                // message: "Password must contain only latin letters, at least 1 upper-case character, 1 lower-case character, one number and one special character."
               }
             })}
           />

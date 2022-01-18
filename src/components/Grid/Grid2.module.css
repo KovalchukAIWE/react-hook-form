@@ -1,0 +1,22 @@
+body {
+  color: #fff;
+}
+
+.container {
+  display: grid;
+  gap: 10px 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+}
+
+.container > * {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: limegreen;
+}
+
+.item:nth-child(3) {
+  order: -1;
+  grid-column: 3 / 4;
+  grid-row: 1 / 5;
+}

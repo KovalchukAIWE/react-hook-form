@@ -36,7 +36,7 @@ const PaginationApp = () => {
       <Stack spacing={2}>
         {!!pageQty && (
           <Pagination 
-            count={pageQty} // how much pages
+            count={pageQty}
             page={page} // current page
             onChange={(_, num) => setPage(num)}
             showFirstButton

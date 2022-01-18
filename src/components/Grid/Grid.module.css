@@ -1,0 +1,11 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.grid > div{
+  background-color: beige;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
